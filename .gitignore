@@ -35,10 +35,7 @@ Thumbs.db
 desktop.ini
 
 # 공개하는 것:
-# ✅ _skills/          (AI 스킬 정의)
-# ✅ .antigravity/     (Antigravity 룰)
-# ✅ .cursor/rules/    (Cursor 룰)
-# ✅ .claude/          (Claude 지침)
+# ✅ .agent/           (Antigravity 룰)
 # ✅ .obsidian/app.json, core-plugins.json  (기본 설정)
 # ✅ 06_Templates/     (노트 템플릿)
 # ✅ 07_Meta/Home.md   (홈 대시보드)

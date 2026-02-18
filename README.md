@@ -23,13 +23,18 @@ git clone https://github.com/korgeek/opensynapse.git
 [obsidian.md](https://obsidian.md) 에서 Obsidian 다운로드 후,  
 **"Open folder as vault"** → 클론한 `opensynapse` 폴더 선택
 
-### 3. AI 연결 (하나만 선택)
+### 3. AI 연결
 
-| | Claude | Antigravity | Cursor |
-|--|--------|-------------|--------|
-| **방식** | 웹/모바일 앱 | 로컬 에이전트 IDE | 로컬 에디터 |
-| **파일 생성** | 복사 → 붙여넣기 | 자동 직접 생성 | 자동 직접 생성 |
-| **설정** | [→ 아래 참조](#claude) | 폴더 열면 자동 | 폴더 열면 자동 |
+Antigravity에서 `opensynapse` 폴더를 Workspace로 열면 즉시 AI 기능이 활성화됩니다.
+별도의 복잡한 설정 없이 바로 대화를 시작하세요.
+
+### 🚀 첫 번째 대화 시작하기 (추천)
+설치가 끝났다면 Antigravity 채팅창에 아래 문장을 복사해서 입력해 보세요. 시스템이 제대로 작동하는지 확인하고, 개인 메모 동기화 설정을 한 번에 마칠 수 있습니다.
+
+> **시스템 세팅 확인해줘. 그리고 내 메모들이 내 Git 저장소에 저장될 수 있게 .gitignore 설정에서 PARA 폴더들(00~07)의 제한을 모두 풀어줘. 현재 전체적인 상태를 보기 쉽게 요약해줘!**
+
+AI가 전체 폴더 구조를 점검하고, `.gitignore` 설정을 변경하며, 현재 볼트의 상태를 **시각적인 대시보드** 형태로 출력해 드립니다.
+
 
 ---
 
@@ -54,44 +59,6 @@ git clone https://github.com/korgeek/opensynapse.git
 ```
 
 AI가 각각을 분석해서, 미팅 노트/지식 노트/할 일로 나눠서 저장합니다.
-
----
-
-## AI별 설정 방법
-
-### Claude
-
-1. [claude.ai](https://claude.ai) → 왼쪽 사이드바 → **New Project**
-2. Project에 파일 3개 업로드:
-
-```
-.claude/INSTRUCTIONS.md
-_skills/pkm-core.md
-_skills/intake-processor.md
-```
-
-3. Project 채팅에 메모 입력 → 출력된 노트 복사 → Obsidian에 붙여넣기
-
----
-
-### Antigravity
-
-Antigravity에서 `opensynapse` 폴더를 Workspace로 열면 끝.  
-`.antigravity/rules.md`가 자동으로 로드되어 바로 사용 가능합니다.
-
-슬래시 커맨드:
-```
-/intake   메모 정리
-/daily    오늘 데일리 노트
-/review   Inbox 한번에 처리
-```
-
----
-
-### Cursor
-
-Cursor에서 `opensynapse` 폴더를 열면 끝.  
-`.cursor/rules/pkm.mdc`가 자동으로 로드됩니다.
 
 ---
 
@@ -126,9 +93,22 @@ AI가 메모 내용을 보고 자동으로 결정합니다.
 
 ## 더 알고 싶다면
 
-- [방법론 설명](_skills/pkm-core.md) — PARA + Zettelkasten이 뭔지
-- [AI 스킬 동작 방식](_skills/intake-processor.md) — 분류 로직 상세
+- [방법론 설명](.agent/rules/pkm.md) — PARA + Zettelkasten 규칙
+- [AI 워크플로우 동작 방식](.agent/workflows/intake.md) — 분류 및 처리 로직 상세
 - [Obsidian 공식 문서](https://help.obsidian.md) — 고급 기능들
+
+---
+
+## 나만의 시스템으로 유지하기 (Git 활용)
+
+OpenSynapse를 단순히 사용하는 것을 넘어, 본인의 지식 베이스를 안전하게 관리하고 싶다면 다음 방법을 권장합니다.
+
+1. **GitHub Fork**: 이 저장소를 본인의 계정으로 Fork 하세요.
+2. **Private 설정**: 개인적인 메모가 포함될 예정이라면, Fork한 저장소를 **Private**으로 설정하는 것을 잊지 마세요.
+3. **`.gitignore` 수정**: 
+   - 기본적으로 OpenSynapse는 개인 보안을 위해 메모 내용(`00_Inbox`, `01_Projects` 등)을 Git 추적에서 제외합니다.
+   - **[첫 번째 대화 시작하기](#-첫-번째-대화-시작하기-추천)** 가이드를 따라 AI에게 요청하면 자동으로 이그노어 설정이 해제되어 본인의 메모를 Git으로 백업/동기화할 수 있습니다.
+4. **지속적인 싱크**: 원본 저장소(`korgeek/opensynapse`)에 새로운 AI 규칙이나 템플릿 업데이트가 올라오면 `Fetch upstream`을 통해 본인의 시스템에 반영할 수 있습니다.
 
 ---
 
