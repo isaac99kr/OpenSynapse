@@ -1,0 +1,31 @@
+# OpenSynapse PKM Rules (Adapter)
+
+> ⚠️ DO NOT EDIT: 이 파일은 어댑터(배포본)입니다.  
+> 최종 수정은 `/_skills/pkm-core.md`, `/_skills/intake-processor.md`에서만 하세요.  
+> 필요 시 동기화 스크립트: `scripts/sync-adapters.ps1`
+
+이 파일은 Cursor가 자동 로드하는 규칙 파일입니다.  
+**단일 원본(SSoT)** 는 아래 2개이며, 최종 규칙은 이 파일들을 따릅니다.
+
+- `/_skills/pkm-core.md` (볼트 철학/폴더/템플릿/태그)
+- `/_skills/intake-processor.md` (입력 → 노트 변환 파이프라인)
+
+## 반드시 지킬 것
+
+- 작업 시작 시 `/_skills/pkm-core.md`와 `/_skills/intake-processor.md`를 **읽고**, 그 규칙에 맞춰 노트를 분류/작성한다.
+- 확신이 없으면 `00_Inbox/`를 기본 저장 위치로 선택한다.
+- “요약 / 핵심 포인트 / 결정 / 할 일 / 원문”을 가능한 분리한다.
+
+## 저장 위치 빠른 규칙
+
+- 회의/미팅 → `01_Projects/<프로젝트명>/` (프로젝트가 불명확하면 `00_Inbox/`)
+- 건강/재정/학습 같은 지속 영역 → `02_Areas/`
+- 읽은 것/인사이트/레퍼런스 → `03_Resources/<주제>/`
+- 오늘 할 일/짧은 로그 → `05_Daily/YYYY-MM-DD.md`
+- 완료/비활성(보관) → `04_Archive/`
+- 운영/가이드/MOC/대시보드 → `07_Meta/`
+
+## 템플릿
+
+- 템플릿은 `06_Templates/`에 있다.
+- 템플릿은 참조하되, 템플릿 파일 자체를 임의로 수정하지 않는다.

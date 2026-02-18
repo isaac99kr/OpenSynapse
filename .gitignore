@@ -1,0 +1,45 @@
+# ================================
+# OpenSynapse .gitignore
+# 개인 노트는 git에서 제외.
+# 볼트 구조(폴더)와 스킬, 설정만 공유.
+# ================================
+
+# 개인 노트 제외 (내용 프라이버시)
+00_Inbox/*
+01_Projects/*
+02_Areas/*
+03_Resources/**/*
+04_Archive/*
+05_Daily/*
+07_Meta/attachments/
+
+# .gitkeep으로 폴더 구조만 보존
+!00_Inbox/.gitkeep
+!01_Projects/.gitkeep
+!02_Areas/.gitkeep
+!03_Resources/**/.gitkeep
+!04_Archive/.gitkeep
+!05_Daily/.gitkeep
+!07_Meta/.gitkeep
+
+# Obsidian 기기별 설정 제외
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/cache
+.obsidian/snippets/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 공개하는 것:
+# ✅ _skills/          (AI 스킬 정의)
+# ✅ .antigravity/     (Antigravity 룰)
+# ✅ .cursor/rules/    (Cursor 룰)
+# ✅ .claude/          (Claude 지침)
+# ✅ .obsidian/app.json, core-plugins.json  (기본 설정)
+# ✅ 06_Templates/     (노트 템플릿)
+# ✅ 07_Meta/Home.md   (홈 대시보드)
+# ✅ README.md
