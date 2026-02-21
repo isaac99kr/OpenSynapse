@@ -1,28 +1,9 @@
 # ================================
 # OpenSynapse .gitignore
-# 개인 노트는 git에서 제외.
-# 볼트 구조(폴더)와 스킬, 설정만 공유.
+# PARA 폴더(00~07) 내용은 Git에 포함 — 메모 백업용.
 # ================================
 
-# 개인 노트 제외 (내용 프라이버시)
-00_Inbox/*
-01_Projects/*
-02_Areas/*
-03_Resources/**/*
-04_Archive/*
-05_Daily/*
-07_Meta/attachments/
-
-# .gitkeep으로 폴더 구조만 보존
-!00_Inbox/.gitkeep
-!01_Projects/.gitkeep
-!02_Areas/.gitkeep
-!03_Resources/**/.gitkeep
-!04_Archive/.gitkeep
-!05_Daily/.gitkeep
-!07_Meta/.gitkeep
-
-# Obsidian 기기별 설정 제외
+# Obsidian 기기별/로컬 설정 제외
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/plugins/
@@ -34,9 +15,9 @@
 Thumbs.db
 desktop.ini
 
-# 공개하는 것:
-# ✅ .agent/           (Antigravity 룰)
-# ✅ .obsidian/app.json, core-plugins.json  (기본 설정)
-# ✅ 06_Templates/     (노트 템플릿)
-# ✅ 07_Meta/Home.md   (홈 대시보드)
+# Git에 포함되는 것:
+# ✅ .agent/              (Antigravity 룰·워크플로우)
+# ✅ 00_Inbox/ ~ 07_Meta/ (PARA 전체 — 메모·프로젝트·리소스 백업)
+# ✅ 06_Templates/        (노트 템플릿)
+# ✅ .obsidian/app.json, appearance.json, core-plugins.json
 # ✅ README.md
